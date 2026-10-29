@@ -6,6 +6,12 @@ import sys
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from pathlib import Path
 
+drive_path = "/mnt/e/"
+author2file_dir = drive_path + "Posting_authors/"
+author_list = drive_path + "Code/MenopauseAuthors.xlsx"
+author_line_number_dir = drive_path + "Code/line_numbers/"
+isPosting = True
+
 def process_month(year, month, keep_authors):
 
     if isPosting:
@@ -55,12 +61,6 @@ def process_month(year, month, keep_authors):
         
     except Exception as e:
         return f"Error {file}: {e}"
-
-drive_path = "/mnt/f/"
-author2file_dir = drive_path + "Posting_authors/"
-author_list = drive_path + "Code/post_and_comment_authors.xlsx"
-author_line_number_dir = drive_path + "Code/line_numbers/"
-isPosting = True
 
 if (len(sys.argv) > 1):
     if (sys.argv[1] == "postings"):

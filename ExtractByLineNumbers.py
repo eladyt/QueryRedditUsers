@@ -63,7 +63,7 @@ def process_one_file(line_file, zip_file, output_file):
     if disp == 1:
         print("Extracted " + str(rlc) + " lines")
     
-drive_path = "/mnt/f/"
+drive_path = "/mnt/e/"
 zipfile_dir = drive_path + "Postings/"
 author_line_number_dir = drive_path + "Code/line_numbers/" 
 output_dir = drive_path + "Code/output/"
